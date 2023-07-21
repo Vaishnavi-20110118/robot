@@ -1,0 +1,249 @@
+.head,
+.arm1,
+.body,
+.arm2,
+.leg1,
+.leg2 {
+  background-color: #d783ec;
+}
+
+.head {
+  width: 200px;
+  margin: 0 auto;
+  height: 150px;
+  border-radius: 200px 200px 0 0;
+  margin-bottom: 10px;
+}
+
+.eye {
+  position: relative;
+  top: 100px;
+}
+
+.eye1,
+.eye2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: white;
+  display: inline-block;
+}
+
+.eye1 {
+  margin-left: 30px;
+}
+
+.eye2 {
+  margin-left: 100px;
+}
+
+.upper_body {
+  width: 300px;
+  height: 150px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.arm1,
+.arm2 {
+  width: 40px;
+  height: 125px;
+  border-radius: 100px;
+  margin-top: 20px;
+}
+
+.arm1 {
+  margin-right: 10px;
+}
+
+.arm1 {
+  margin-right: 10px;
+}
+
+.arm2 {
+  margin-left: 10px;
+}
+
+.body {
+  width: 200px;
+  height: 200px;
+  border-radius: 0 0 50px 50px;
+  transition: border-radius 1s;
+}
+
+.lower_body {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.leg1,
+.leg2 {
+  width: 40px;
+  height: 120px;
+  border-radius: 0 0 100px 100px;
+  display: inline-block;
+}
+
+.leg1 {
+  margin-left: 45px;
+}
+
+.leg2 {
+  margin-left: 30px;
+}
+
+.robot:hover .head {
+  animation: movehead 2s infinite;
+}
+
+.robot:hover .body {
+  border-radius: 30%;
+  animation: movehead 2s infinite;
+}
+
+.robot:hover .arm1 {
+  animation: movearm1 2s infinite;
+}
+
+.robot:hover .arm2 {
+  animation: movearm2 2s infinite;
+}
+
+.robot:hover .leg1 {
+  animation: moveleg1 2s infinite;
+}
+
+.robot:hover .leg2 {
+  animation: moveleg2 2s infinite;
+}
+
+@keyframes movehead {
+  0% {
+    width: 200px;
+  }
+
+  25% {
+    width: 300px;
+  }
+
+  50% {
+    width: 200px;
+  }
+
+  75% {
+    width: 300px;
+  }
+
+  100% {
+    width: 200px;
+  }
+}
+
+@keyframes movearm1 {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  25% {
+    transform: rotate(90deg);
+    transform-origin: top center;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  75% {
+    transform: rotate(90deg);
+    transform-origin: top center;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+}
+
+@keyframes movearm2 {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  25% {
+    transform: rotate(-90deg);
+    transform-origin: top center;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  75% {
+    transform: rotate(-90deg);
+    transform-origin: top center;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+}
+
+@keyframes moveleg1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(20deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes moveleg2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-20deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes movebody {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
